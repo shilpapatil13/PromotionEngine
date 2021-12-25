@@ -4,8 +4,9 @@ This is simple Spring Boot App that provides swagger UI to add products to cart 
 Remove items from cart and calculate the final price of cart after applying promotion on all the products.
 
 com.promotion.promotionrules package provides a single business rule that serves below two types of promotions
-•	buy 'n' items of a SKU for a fixed price (3 A's for 130)
-•	buy SKU 1 & SKU 2 for a fixed price ( C + D = 30 )
+3 of A's for 130
+2 of B's for 45
+C & D for 30
 
 We can add multiple promotion business logic in this package and expose via REST API
 
