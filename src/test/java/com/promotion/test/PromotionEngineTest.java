@@ -9,11 +9,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.promotion.model.Product;
-import com.promotion.promotionrules.PromotionRules;
+import com.promotion.promotionrules.impl.PromotionRuleA;
 
 public class PromotionEngineTest {
 
-	PromotionRules promotionRules = new PromotionRules();
+	PromotionRuleA promotionRuleA = new PromotionRuleA();
 	Product productA = new Product();
 	Product productB = new Product();
 	Product productC = new Product();
@@ -40,7 +40,7 @@ public class PromotionEngineTest {
         skus.add(productA);
         
         assertEquals(3, skus.size());
-        assertEquals(100, promotionRules.applyPromotionRule(skus));
+        assertEquals(100, promotionRuleA.applyPromotionRule(skus));
     }
     
     @Test
@@ -56,7 +56,7 @@ public class PromotionEngineTest {
         skus.add(productA);
         
         assertEquals(3, skus.size());
-        assertEquals(370, promotionRules.applyPromotionRule(skus));
+        assertEquals(370, promotionRuleA.applyPromotionRule(skus));
     }
     
     @Test
@@ -74,6 +74,6 @@ public class PromotionEngineTest {
         skus.add(productA);
         
         assertEquals(4, skus.size());
-        assertEquals(280, promotionRules.applyPromotionRule(skus));
+        assertEquals(280, promotionRuleA.applyPromotionRule(skus));
     }
 }
