@@ -28,22 +28,6 @@ public class PromotionEngineTest {
 	}
     
     @Test
-    public void scenario1() {
-    	List<Product> skus = new ArrayList();
-       
-        productA.setQuantity(1);
-        productB.setQuantity(1);
-        productC.setQuantity(1);
-        
-        skus.add(productC);
-        skus.add(productB);
-        skus.add(productA);
-        
-        assertEquals(3, skus.size());
-        assertEquals(100, promotionRules.applyPromotionRule(skus));
-    }
-    
-    @Test
     public void scenarioA() {
     	List<Product> skus = new ArrayList();
        
