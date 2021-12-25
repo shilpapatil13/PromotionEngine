@@ -16,7 +16,7 @@ public class PromotionServiceImpl implements PromotionService{
 	@Autowired
 	PromotionRules promotionRules; 
 
-	List<Product> globalList = new ArrayList();
+	List<Product> globalList = new ArrayList<Product>();
 	
 	@Override
 	public void addToCart(Product p) {

@@ -29,7 +29,7 @@ public class PromotionEngineTest {
     
     @Test
     public void scenarioA() {
-    	List<Product> skus = new ArrayList();
+    	List<Product> skus = new ArrayList<Product>();
        
         productA.setQuantity(1);
         productB.setQuantity(1);
@@ -45,7 +45,7 @@ public class PromotionEngineTest {
     
     @Test
     public void scenarioB() {
-    	List<Product> skus = new ArrayList();
+    	List<Product> skus = new ArrayList<Product>();
        
         productA.setQuantity(5);
         productB.setQuantity(5);
@@ -61,7 +61,7 @@ public class PromotionEngineTest {
     
     @Test
     public void scenarioC() {
-    	List<Product> skus = new ArrayList();
+    	List<Product> skus = new ArrayList<Product>();
        
         productA.setQuantity(3);
         productB.setQuantity(5);

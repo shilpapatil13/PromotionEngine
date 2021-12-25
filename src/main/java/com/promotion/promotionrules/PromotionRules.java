@@ -3,8 +3,6 @@ package com.promotion.promotionrules;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import com.promotion.model.Product;
 
 @Component
