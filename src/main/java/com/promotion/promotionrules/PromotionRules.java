@@ -15,8 +15,7 @@ public class PromotionRules {
 		int qtyC = 0;
 		int priceC = 0;
 		int qtyD = 0;
-		int priceD = 0;
-		
+		int priceD = 0;		
 		
 		for(Product p : skus) {
 			if(p.getName().equalsIgnoreCase("A")) {
