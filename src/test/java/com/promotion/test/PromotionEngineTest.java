@@ -21,18 +21,10 @@ public class PromotionEngineTest {
 	
 	@BeforeEach
 	public void setupData() {
-		
 	    productA.setName("A");
-	    productA.setPrice(50);
-	   
 	    productB.setName("B");
-	    productB.setPrice(30);
-	    
 	    productC.setName("C");
-	    productC.setPrice(20);
-	   
 	    productD.setName("D");
-	    productD.setPrice(30);
 	}
     
     @Test
