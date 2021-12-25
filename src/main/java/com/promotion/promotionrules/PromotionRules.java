@@ -2,21 +2,22 @@ package com.promotion.promotionrules;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.promotion.model.Product;
 
-@Service
+@Component
 public class PromotionRules {
 	
 	public int applyPromotionRule(List<Product> skus) {
 		
 		int qtyA = 0;
-		int priceA = 0;
+		int priceA = 50;
 		int qtyB = 0;
-		int priceB = 0;
+		int priceB = 30;
 		int qtyC = 0;
-		int priceC = 0;
+		int priceC = 20;
 		boolean presentC = false;
 		boolean presentD = false;
 		int totalPriceD = 0;
@@ -24,15 +25,12 @@ public class PromotionRules {
 		for(Product p : skus) {
 			if(p.getName().equalsIgnoreCase("A")) {
 				qtyA = p.getQuantity();
-				priceA = p.getPrice();
 			}
 			if(p.getName().equalsIgnoreCase("B")) {
 				qtyB = p.getQuantity();
-				priceB = p.getPrice();
 			}
 			if(p.getName().equalsIgnoreCase("C")) {
 				qtyC = p.getQuantity();
-				priceC = p.getPrice();
 				presentC = true;
 			}
 			if(p.getName().equalsIgnoreCase("D")) {
