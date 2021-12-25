@@ -17,8 +17,9 @@ public class PromotionRules {
 		int priceB = 0;
 		int qtyC = 0;
 		int priceC = 0;
-		int qtyD = 0;
-		int priceD = 0;		
+		boolean presentC = false;
+		boolean presentD = false;
+		int totalPriceD = 0;
 		
 		for(Product p : skus) {
 			if(p.getName().equalsIgnoreCase("A")) {
@@ -32,18 +33,19 @@ public class PromotionRules {
 			if(p.getName().equalsIgnoreCase("C")) {
 				qtyC = p.getQuantity();
 				priceC = p.getPrice();
+				presentC = true;
 			}
 			if(p.getName().equalsIgnoreCase("D")) {
-				qtyD = p.getQuantity();
-				priceD = p.getPrice();
+				presentD = true;
 			}
 		}
 		
 		int totalPriceA = (qtyA / 3) * 130 + (qtyA % 3 * priceA);
         int totalPriceB = (qtyB / 2) * 45 + (qtyB % 2 * priceB);
         int totalPriceC = (qtyC * priceC);
-        int totalPriceD = (qtyD * priceD);
-		
+        if(presentC && presentD)
+        	totalPriceD = 10;
+        
 		return totalPriceA + totalPriceB + totalPriceC + totalPriceD;
 	}
 
