@@ -26,17 +26,15 @@ public class PromotionController {
 	PromotionRules promotionRules; 
 	
 	@Operation(description="Add Products to Cart")
-	@RequestMapping(value = "/api/promotion/addToCart/productName/{productName}/quantity/{quantity}/price/{price}", method = RequestMethod.GET, produces="application/json")
+	@RequestMapping(value = "/api/promotion/addToCart/productName/{productName}/quantity/{quantity}", method = RequestMethod.GET, produces="application/json")
 	public ResponseEntity<String> addToCart(@Parameter(description="Product Name", examples = {
 			@ExampleObject(name = "A"),
 			@ExampleObject(name = "B"),
 			@ExampleObject(name = "C"),
 			@ExampleObject(name = "D")}, example ="A") @PathVariable(required=true)String productName, 
-			@PathVariable(required=true)Integer quantity,
-			@PathVariable(required=true)Integer price){
+			@PathVariable(required=true)Integer quantity){
 		Product p = new Product();
 		p.setName(productName);
-		p.setPrice(price);
 		p.setQuantity(quantity);
 		promotionService.addToCart(p);
 		return new ResponseEntity<>(HttpStatus.OK);
