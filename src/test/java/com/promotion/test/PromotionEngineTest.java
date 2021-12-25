@@ -6,11 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.promotion.model.Product;
 import com.promotion.promotionrules.PromotionRules;
 
 public class PromotionEngineTest {
 
+	@Autowired
+	PromotionRules promotionRules;
+	
     @Test
     public void getTotalPrice() {
 
@@ -42,7 +47,7 @@ public class PromotionEngineTest {
         skus.add(productA);
         
         assertEquals(4, skus.size());
-        assertEquals(100, PromotionRules.applyPromotionRule(skus));
+        assertEquals(100, promotionRules.applyPromotionRule(skus));
 
     }
 }

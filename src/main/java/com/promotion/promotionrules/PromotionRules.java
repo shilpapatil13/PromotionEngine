@@ -2,11 +2,14 @@ package com.promotion.promotionrules;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.promotion.model.Product;
 
+@Service
 public class PromotionRules {
 	
-	public static int applyPromotionRule(List<Product> skus) {
+	public int applyPromotionRule(List<Product> skus) {
 		
 		int qtyA = 0;
 		int priceA = 0;
