@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.promotion.model.Product;
-import com.promotion.promotionrules.PromotionRules;
+import com.promotion.promotionrules.PromotionRule;
 import com.promotion.service.PromotionService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -23,7 +23,7 @@ public class PromotionController {
 	PromotionService promotionService;  
 
 	@Autowired
-	PromotionRules promotionRules; 
+	PromotionRule promotionRule; 
 	
 	@Operation(description="Add Products to Cart")
 	@RequestMapping(value = "/api/promotion/addToCart/productName/{productName}/quantity/{quantity}", method = RequestMethod.GET, produces="application/json")
