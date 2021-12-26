@@ -17,3 +17,5 @@ If business rules are too complex and have to maintained by business users we ca
 and use Drool Engine to apply promotions on products.
 
 Excel sheets can be easily altered by business and no deployment would be required
+
+localhost:8080/swagger-ui.html
