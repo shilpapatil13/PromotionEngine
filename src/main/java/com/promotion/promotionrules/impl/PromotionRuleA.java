@@ -2,9 +2,14 @@ package com.promotion.promotionrules.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import com.promotion.model.Product;
 import com.promotion.promotionrules.PromotionRule;
 
+@Component
+@Qualifier("PromotionRuleA")
 public class PromotionRuleA implements PromotionRule{
 
 	@Override
