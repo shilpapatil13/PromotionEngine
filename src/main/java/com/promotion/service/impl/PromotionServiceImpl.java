@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.promotion.model.Product;
-import com.promotion.promotionrules.PromotionRule;
+import com.promotion.promotionrules.impl.PromotionRuleA;
 import com.promotion.service.PromotionService;
 
 @Service
 public class PromotionServiceImpl implements PromotionService{
 	
 	@Autowired
-	PromotionRule promotionRule; 
+	PromotionRuleA promotionRuleA; 
 
 	List<Product> globalList = new ArrayList<Product>();
 	
@@ -22,7 +22,6 @@ public class PromotionServiceImpl implements PromotionService{
 	public void addToCart(Product p) {
 		// TODO Auto-generated method stub
 		globalList.add(p);
-		
 	}
 
 	@Override
@@ -34,7 +33,7 @@ public class PromotionServiceImpl implements PromotionService{
 	@Override
 	public Integer calculateTotalPrice() {
 		// TODO Auto-generated method stub
-		return promotionRule.applyPromotionRule(globalList);
+		return promotionRuleA.applyPromotionRule(globalList);
 	}
 
 }
