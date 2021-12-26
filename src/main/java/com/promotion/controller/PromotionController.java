@@ -28,7 +28,7 @@ public class PromotionController {
 	PromotionRule promotionRule; 
 	
 	@Operation(description="Add Products to Cart")
-	@RequestMapping(value = "/api/promotion/addToCart/productName/{productName}/quantity/{quantity}", method = RequestMethod.GET, produces="application/json")
+	@RequestMapping(value = "/api/promotion/addToCart/productName/{productName}/quantity/{quantity}", method = RequestMethod.POST, produces="application/json")
 	public ResponseEntity<String> addToCart(@Parameter(description="Product Name", examples = {
 			@ExampleObject(name = "A"),
 			@ExampleObject(name = "B"),
@@ -50,7 +50,7 @@ public class PromotionController {
 	}
 	
 	@Operation(description="Clear Cart")
-	@RequestMapping(value = "/api/promotion/clearCart", method = RequestMethod.GET, produces="application/json")
+	@RequestMapping(value = "/api/promotion/clearCart", method = RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<Integer> clearCart(){
 		promotionService.clearCart();
 		return new ResponseEntity<>(HttpStatus.OK);
